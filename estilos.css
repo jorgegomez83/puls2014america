@@ -1,3 +1,59 @@
+/*@font-face {
+    font-family: 'open_sansregular';
+    src: url('Fuentes/OpenSans-Regular-webfont.eot');
+    src: url('Fuentes/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fuentes/OpenSans-Regular-webfont.woff') format('woff'),
+         url('Fuentes/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('Fuentes/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('Fuentes/icomoon.eot?h5utve');
+	src:url('Fuentes/icomoon.eot?#iefixh5utve') format('embedded-opentype'),
+		url('Fuentes/icomoon.woff?h5utve') format('woff'),
+		url('Fuentes/icomoon.ttf?h5utve') format('truetype'),
+		url('Fuentes/icomoon.svg?h5utve#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-lapiz:before {
+	content: "\e602";
+}
+
+.icon-f-abajo:before {
+	content: "\e603";
+}
+
+.icon-f-arriba:before {
+	content: "\e604";
+}
+
+.icon-estrella:before {
+	content: "\e601";
+}
+
+
+
 a 
 {
 	color: #22BCE0;
@@ -6,7 +62,7 @@ a
 body 
 {
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: "Open Sans";
 	font-size: 16px;
 }
 footer
@@ -74,6 +130,7 @@ header #logo img
 nav
 {
 	background: #80BCA3;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
 	padding: 0 0.5em;
 	position: relative;
 }
@@ -130,7 +187,7 @@ nav ul li a
 }
 #contenido .item .datos_item
 {
-	margin-top: 1em 1em 0 0;
+	margin : 1em 1em 0 0;
 	text-align: right;
 
 }
@@ -163,7 +220,7 @@ nav ul li a
 {
   	font-size: 1.2em;
   	font-style: italic;
-  	padding-top: 1em;
+  	padding: 1em 1em 0 0;
 }
 
 #contenido .item .titulo_item a
