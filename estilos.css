@@ -38,11 +38,14 @@
 
 .icon-lapiz:before {
 	content: "\e602";
+	margin-right: 0.8em
 }
 
 .icon-f-abajo:before {
 	content: "\e603";
+	color: #DD4F24;
 }
+
 
 .icon-f-arriba:before {
 	content: "\e604";
@@ -50,6 +53,10 @@
 
 .icon-estrella:before {
 	content: "\e601";
+	color: #FFBE2C;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.1em;
 }
 
 
@@ -59,6 +66,10 @@ a
 	color: #22BCE0;
 }
 
+aside
+{
+	display: none;
+}
 body 
 {
 	background: #EEEEEE;
@@ -120,18 +131,34 @@ header #avatar img
    border-radius: 50%;
    width: 55px;
 }
-header #logo img 
+
+header #logo
 {
 	border-right: 1px solid white;
 	margin-right: 0.5em;
+}
+
+header #logo img 
+{
+	margin-right: 0.5em;
 	padding-right: 0.5em;
+	-webkit-transition: 0.5s;
 	width: 52px;
+
+}
+
+header #logo img:hover
+{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
 }
 nav
 {
 	background: #80BCA3;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
-	padding: 0 0.5em;
+	padding: 0 6em 0 0.5em;
 	position: relative;
 }
 nav ul
@@ -147,6 +174,7 @@ nav ul #publicar_nav
     top: -0.4em;
     right: 0;
  }
+
 nav ul #publicar_nav a 
 {
     background: #22BCE0;
@@ -157,6 +185,12 @@ nav ul #publicar_nav a
     text-decoration: none;
     text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
  }
+
+nav ul #publicar_nav a:hover:before
+{
+ 	color: red;
+}
+
 nav ul li
 {
 	display:  inline-block;
@@ -166,8 +200,16 @@ nav ul li a
 {
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em;
+	-webkit-transition: 0.3s;
 }
+
+nav ul li a:hover
+{
+  background: #343B54;
+
+}
+
 #contenido
 {
 	margin: 1em;
@@ -240,6 +282,10 @@ nav ul li a
 	width: 90%;
 
 }
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
 
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item
@@ -247,3 +293,35 @@ nav ul li a
    float: right;
 }
 
+@media screen and (min-width: 800px){
+  #contenido
+  {
+  	overflow: hidden;
+  }
+
+  #contenido .item
+  {
+  	float: left;
+  	width: 49%;
+  }
+
+   #contenido .item:nth-child(odd)
+   {
+   	     margin-right: 2%; 
+   }
+}
+
+@media screen and (min-width: 1000px){
+	aside
+	{
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 20%;
+	}
+
+	aside video
+	{
+		width: 100%;
+	}
+}
